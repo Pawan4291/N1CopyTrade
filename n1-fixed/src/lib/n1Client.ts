@@ -8,7 +8,7 @@
  */
 
 // N1 Testnet API base — Nord trading engine
-export const N1_NORD_BASE = '/api/proxy?path=';
+export const N1_NORD_BASE = 'https://api.n1.xyz';
 // N1 Testnet API base — Proton protocol layer (same host, different path prefix)
 export const N1_PROTON_BASE = 'https://api.n1.xyz';
 
