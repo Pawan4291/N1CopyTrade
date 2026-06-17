@@ -10,6 +10,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   });
   const qs = params.toString();
   const url = `${N1_BASE}${path}${qs ? '?' + qs : ''}`;
+
   try {
     const response = await fetch(url, {
       headers: { 'Accept': 'application/json' },
