@@ -27,7 +27,8 @@ class N1ApiError extends Error {
 }
 
 function buildUrl(base: string, path: string, params?: Record<string, string | number | boolean | undefined | null>): string {
-  const url = new URL(path, base);
+  const fullUrl = `${window.location.origin}${base}${path}`;
+  const url = new URL(fullUrl);
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
       if (value !== undefined && value !== null) {
