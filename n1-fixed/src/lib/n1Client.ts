@@ -7,10 +7,8 @@
  *      Also added CORS-safe fetch with 'cors' mode.
  */
 
-// N1 Testnet API base — Nord trading engine
-export const N1_NORD_BASE = 'https://api.n1.xyz';
-// N1 Testnet API base — Proton protocol layer (same host, different path prefix)
-export const N1_PROTON_BASE = 'https://api.n1.xyz';
+export const N1_NORD_BASE = '/api/n1';
+export const N1_PROTON_BASE = '/api/n1';
 
 // FIX: WebSocket should use wss:// — already correct, but add /ws path clarification
 export const N1_WS_BASE = 'wss://api.n1.xyz';
