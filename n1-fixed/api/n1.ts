@@ -9,7 +9,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (k !== 'path' && v) params.set(k, String(v));
   });
   const qs = params.toString();
-  const url = `${N1_BASE}${path}${qs ? '?' + qs : ''}`;
+  const url = `${N1_BASE}${path.startsWith('/') ? path : '/' + path}${qs ? '?' + qs : ''}`;
 
   try {
     const response = await fetch(url, {
